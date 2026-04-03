@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Orbit | Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Daily Planner</p>
+        <h1>Task Orbit</h1>
+        <p class="subtitle">Capture what matters and finish with focus.</p>
+      </header>
+
+      <section class="panel" aria-label="Todo app">
+        <form id="task-form" class="task-form" novalidate>
+          <label class="visually-hidden" for="task-input">Add a task</label>
+          <input
+            id="task-input"
+            name="task"
+            type="text"
+            maxlength="120"
+            placeholder="What needs to be done today?"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Add Task</button>
+        </form>
+
+        <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
+
+        <div class="toolbar">
+          <div class="stats" aria-live="polite">
+            <span id="task-count">0 tasks</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span id="pending-count">0 pending</span>
+          </div>
+          <button id="clear-completed" type="button" class="btn btn-secondary">
+            Clear Completed
+          </button>
+        </div>
+
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+        <template id="empty-state-template">
+          <li class="empty-state">
+            <strong>No tasks yet.</strong>
+            <span>Add your first one above.</span>
+          </li>
+        </template>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
