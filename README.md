@@ -28,9 +28,5 @@ git remote add origin <your-repo-url>
 git push -u origin main
 ```
 
-## Deploy on Vercel
-1. Go to Vercel and click **Add New Project**.
-2. Import your GitHub repository.
-3. Vercel will detect this as a static site and deploy automatically.
-4. No build command is required.
-# Todo-app
+
+# Todo-app✨
